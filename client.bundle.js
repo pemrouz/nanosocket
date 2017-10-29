@@ -175,7 +175,7 @@ var emitterify = function emitterify(body) {
   }
 };
 
-var index = function(url = location.origin.replace('http', 'ws')){
+var nanosocket = function(url = location.origin.replace('http', 'ws')){
   const io = emitterify({ attempt: 0 });
   io.ready = io.once('connected');
   io.connect = connect(io, url);
@@ -201,6 +201,6 @@ const connect = (io, url) => () => {
 const backoff = (attempt, base = 100, cap = 10000) =>
   min(cap, base * pow(2, attempt));
 
-return index;
+return nanosocket;
 
 }());
