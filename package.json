@@ -11,7 +11,10 @@
     "test": "node test.js",
     "coverage": "tap test.js --coverage --coverage-report=lcov"
   },
-  "keywords": ["websocket", "client"],
+  "keywords": [
+    "websocket",
+    "client"
+  ],
   "author": "pemrouz (https://github.com/pemrouz)",
   "license": "pemrouz.mit-license.org",
   "devDependencies": {
