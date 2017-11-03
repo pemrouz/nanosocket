@@ -1,4 +1,4 @@
-module.exports = function(url = location.origin.replace('http', 'ws')){
+module.exports = function(url = location.href.replace('http', 'ws')){
   const io = emitterify({ attempt: 0 })
   io.ready = io.once('connected')
   io.connect = connect(io, url)
